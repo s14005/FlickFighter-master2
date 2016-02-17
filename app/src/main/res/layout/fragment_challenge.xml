@@ -1,0 +1,68 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:background="@drawable/background"
+    android:layout_height="match_parent"
+    tools:context="jp.ac.it_college.std.flickfighter.ChallengeFragment">
+
+    <ImageSwitcher
+        android:id="@+id/challenge_clear1"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="20dp"/>
+
+    <TextView
+        android:id="@+id/challenge1"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="３分以内にクリア！！"
+        android:padding="20dp"
+        android:layout_below="@id/result_clear_text"
+        android:layout_toRightOf="@id/challenge_clear1"
+        android:background="@drawable/stone_wall"
+        android:layout_marginTop="50dp" />
+
+    <ImageSwitcher
+        android:id="@+id/challenge_clear2"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_below="@+id/challenge_clear1"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="20dp"/>
+
+    <TextView
+        android:id="@+id/challenge2"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="ノーダメクリア！！"
+        android:padding="20dp"
+        android:background="@drawable/stone_wall"
+        android:layout_below="@+id/challenge1"
+        android:layout_toRightOf="@id/challenge_clear2"
+        android:layout_marginTop="50dp" />
+
+
+    <ImageSwitcher
+        android:id="@+id/challenge_clear3"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_below="@+id/challenge_clear2"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="20dp"/>
+
+    <TextView
+        android:id="@+id/challenge3"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="スライムを倒す"
+        android:padding="20dp"
+        android:background="@drawable/stone_wall"
+        android:layout_below="@+id/challenge2"
+        android:layout_toRightOf="@id/challenge_clear3"
+        android:layout_marginTop="50dp" />
+
+
+</RelativeLayout>

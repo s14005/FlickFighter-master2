@@ -1,0 +1,132 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_layout"
+    android:background="@drawable/background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/image_stage_background"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/flick_background" />
+
+    <ImageView
+        android:id="@+id/enemy_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true" />
+
+    <LinearLayout
+        android:id="@+id/text_box"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/enemy_image"
+        android:visibility="gone"
+        android:background="#77000000"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/userInputText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#00000000"
+            android:gravity="center"
+            android:singleLine="true"
+            android:textColor="#FFF"
+            android:textSize="30dp" />
+
+        <TextView
+            android:id="@+id/enemyString"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="#FFFFFF"
+            android:textSize="30dp" />
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/enemy_life_gauge"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:progressDrawable="@drawable/progresspic"
+        android:layout_above="@id/text_box"
+        android:visibility="gone"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" />
+
+    <SurfaceView
+        android:id="@+id/limit_time_bar"
+        android:layout_width="150dp"
+        android:layout_height="10dp"
+        android:layout_below="@id/text_box"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone"
+        android:background="#00FF00" />
+
+    <Button
+        android:id="@+id/keyBoardShownButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:soundEffectsEnabled="false"
+        android:text="キーボードを表示" />
+
+    <ProgressBar
+        android:id="@+id/player_life_gauge"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:progressDrawable="@drawable/progresspic"
+        android:layout_centerHorizontal="true"
+        />
+
+
+    <TextView
+        android:id="@+id/timer_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:text="00:00"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/battle_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:text="1 / 5"
+        android:textSize="30dp" />
+
+    <TextView
+        android:id="@+id/text_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_alignTop="@id/text_box"
+        android:layout_centerHorizontal="true"
+        android:textSize="40sp"
+        />
+
+    <TextView
+        android:id="@+id/text_boss_advent_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_alignTop="@id/text_box"
+        android:layout_centerHorizontal="true"
+        android:text="WARNING!"
+        android:textSize="40sp"
+        android:textColor="#FF0000"
+        />
+
+</RelativeLayout>
