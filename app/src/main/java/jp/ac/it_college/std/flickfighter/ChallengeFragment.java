@@ -10,19 +10,20 @@ import android.view.ViewGroup;
 import android.widget.Gallery;
 import android.widget.ImageSwitcher;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.ViewSwitcher;
 
 public class ChallengeFragment extends Fragment
-        implements ViewSwitcher.ViewFactory {
+        implements ViewSwitcher.ViewFactory{
     public static final String CHALLENGE_CLEAR_WITHIN_3MIN = "clear_within_3min";
     public static final String CHALLENGE_CLEAR_NO_DAMAGE = "no_damage";
     public static final String CHALLENGE_CLEAR_RARE_CRUSHING = "rare_crushing";
     private static final String STAGE_CLEAR = "stage_clear";
-
+    private TextView okane;
     private boolean mChallenge1;
     private boolean mChallenge2;
-    private boolean mChallenge3;
-
+    //private boolean mChallenge3;
+    private View rootVie;
     private SharedPreferences playerStatus;
     private SharedPreferences.Editor editor;
 
@@ -50,6 +51,7 @@ public class ChallengeFragment extends Fragment
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //setContentView(R.layout.fragment_challenge);
         playerStatus = getActivity().getSharedPreferences("status", Context.MODE_PRIVATE);
         editor = playerStatus.edit();
         stageId = getActivity().getIntent().getExtras().getInt(StageSelectFragment.STAGE_ID);
@@ -57,8 +59,15 @@ public class ChallengeFragment extends Fragment
         if (getArguments() != null) {
             mChallenge1 = getArguments().getLong(CHALLENGE_CLEAR_WITHIN_3MIN) < STIPULATED_TIME;
             mChallenge2 = getArguments().getBoolean(CHALLENGE_CLEAR_NO_DAMAGE);
-            mChallenge3 = getArguments().getBoolean(CHALLENGE_CLEAR_RARE_CRUSHING);
+
+      //      mChallenge3 = getArguments().getBoolean(CHALLENGE_CLEAR_RARE_CRUSHING);
         }
+        okane = (TextView) rootVie.findViewById(R.id.okane);
+        //現在のポイントを表示
+        //okane.setText(""+10);
+        //setContextView(R.layout.fragment_challenge);
+        //TextView okane = (TextView)findViewById(R.id.okane);
+        //okane.setText("" + 10);
     }
 
     @Override
@@ -70,12 +79,25 @@ public class ChallengeFragment extends Fragment
         challenge1.setFactory(this);
         challenge2 = (ImageSwitcher) view.findViewById(R.id.challenge_clear2);
         challenge2.setFactory(this);
-        challenge3 = (ImageSwitcher) view.findViewById(R.id.challenge_clear3);
-        challenge3.setFactory(this);
+
+        //TextView okane = (TextView)findViewById(R.id.okane);
+        //okane.setText("" + 10);
+        if(stageId == 1){
+
+        }else if(stageId == 2){
+
+        }else if(stageId == 3){
+
+        }else {
+        }
+    //    challenge3 = (ImageSwitcher) view.findViewById(R.id.challenge_clear3);
+    //    challenge3.setFactory(this);
 
         checkChallenge();
         return view;
     }
+
+
 
     private void checkChallenge() {
         if (mChallenge1) {
@@ -102,7 +124,7 @@ public class ChallengeFragment extends Fragment
             challenge2.setImageResource(img[1]);
         }
 
-        if (mChallenge3) {
+        /*if (mChallenge3) {
             challenge3.setImageResource(img[2]);
             if (!playerStatus.getBoolean(stageId + BattleActivity.PREF_RARE_CRUSHING, false)) {
                 challenge3.setImageResource(img[0]);
@@ -112,7 +134,7 @@ public class ChallengeFragment extends Fragment
             }
         } else {
             challenge3.setImageResource(img[1]);
-        }
+        }*/
 
     }
 

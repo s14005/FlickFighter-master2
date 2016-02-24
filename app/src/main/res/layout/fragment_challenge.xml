@@ -43,26 +43,15 @@
         android:layout_toRightOf="@id/challenge_clear2"
         android:layout_marginTop="50dp" />
 
-
-    <ImageSwitcher
-        android:id="@+id/challenge_clear3"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:layout_below="@+id/challenge_clear2"
-        android:layout_marginTop="50dp"
-        android:layout_marginLeft="20dp"/>
-
     <TextView
-        android:id="@+id/challenge3"
         android:layout_width="wrap_content"
-        android:layout_height="70dp"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="スライムを倒す"
-        android:padding="20dp"
-        android:background="@drawable/stone_wall"
+        android:layout_height="wrap_content"
+        android:id="@+id/okane"
+        android:text=""
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
         android:layout_below="@+id/challenge2"
-        android:layout_toRightOf="@id/challenge_clear3"
-        android:layout_marginTop="50dp" />
-
+        android:layout_alignLeft="@+id/challenge2"
+        android:layout_alignStart="@+id/challenge2" />
 
 </RelativeLayout>

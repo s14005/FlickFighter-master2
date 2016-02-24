@@ -54,7 +54,7 @@
                 <Button
                     android:id="@+id/button_stage1"
                     android:soundEffectsEnabled="false"
-                    android:text="「あ」行"
+                    android:text="初級"
                     android:textSize="50dp"
                     android:textColor="#ff0dff00"
                     android:background="@drawable/stone_wall"
@@ -78,7 +78,7 @@
                 <Button
                     android:id="@+id/button_stage2"
                     android:soundEffectsEnabled="false"
-                    android:text="「か」行"
+                    android:text="中級"
                     android:textSize="50dp"
                     android:textColor="#ff0dff00"
                     android:background="@drawable/stone_wall"
@@ -101,7 +101,7 @@
                 <Button
                     android:id="@+id/button_stage3"
                     android:soundEffectsEnabled="false"
-                    android:text="「さ」行"
+                    android:text="上級"
                     android:textSize="50dp"
                     android:textColor="#ff0dff00"
                     android:background="@drawable/stone_wall"
@@ -125,7 +125,7 @@
                 <Button
                     android:id="@+id/button_stage4"
                     android:soundEffectsEnabled="false"
-                    android:text="「た」行"
+                    android:text="Coming Soon"
                     android:textSize="50dp"
                     android:textColor="#ffff00"
                     android:background="@drawable/stone_wall"
@@ -149,7 +149,7 @@
                 <Button
                     android:id="@+id/button_stage5"
                     android:soundEffectsEnabled="false"
-                    android:text="「な」行"
+                    android:text="Coming Soon"
                     android:textSize="50dp"
                     android:textColor="#ffff00"
                     android:background="@drawable/stone_wall"
@@ -173,7 +173,7 @@
                 <Button
                     android:id="@+id/button_stage6"
                     android:soundEffectsEnabled="false"
-                    android:text="「は」行"
+                    android:text="Coming Soon"
                     android:textSize="50dp"
                     android:textColor="#ffff00"
                     android:background="@drawable/stone_wall"
@@ -197,7 +197,7 @@
                 <Button
                     android:id="@+id/button_stage7"
                     android:soundEffectsEnabled="false"
-                    android:text="「ま」行"
+                    android:text="Coming Soon"
                     android:textSize="50dp"
                     android:textColor="#ffff00"
                     android:background="@drawable/stone_wall"
@@ -220,7 +220,7 @@
 
                 <Button
                     android:id="@+id/button_stage8"
-                    android:text="「や」行"
+                    android:text="Coming Soon"
                     android:soundEffectsEnabled="false"
                     android:textSize="50dp"
                     android:textColor="#ff0000"
@@ -245,7 +245,7 @@
                 <Button
                     android:id="@+id/button_stage9"
                     android:soundEffectsEnabled="false"
-                    android:text="「ら」行"
+                    android:text="Coming Soon"
                     android:textSize="50dp"
                     android:textColor="#ff0000"
                     android:background="@drawable/stone_wall"
@@ -269,7 +269,7 @@
                 <Button
                     android:id="@+id/button_stage10"
                     android:soundEffectsEnabled="false"
-                    android:text="「わ」行"
+                    android:text="Coming Soon"
                     android:textSize="50dp"
                     android:textColor="#ff0000"
                     android:background="@drawable/stone_wall"

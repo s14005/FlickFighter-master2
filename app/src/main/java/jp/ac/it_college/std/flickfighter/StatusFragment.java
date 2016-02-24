@@ -38,14 +38,13 @@ public class StatusFragment extends Fragment implements View.OnClickListener {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
         rootView = inflater.inflate(R.layout.fragment_status, container, false);
 
         rootView.findViewById(R.id.button_levelUp_attack).setOnClickListener(this);
         rootView.findViewById(R.id.button_levelUp_defence).setOnClickListener(this);
         rootView.findViewById(R.id.button_levelUp_life).setOnClickListener(this);
         rootView.findViewById(R.id.button_stage_select).setOnClickListener(this);
-
-        //SharedPreferences data = getSharedPreferences("DataSave", Context.MODE_PRIVATE);
 
         playerStatus = getActivity().getSharedPreferences("status", Context.MODE_PRIVATE);
         statusDisplay(); //ステータスの状態を表示

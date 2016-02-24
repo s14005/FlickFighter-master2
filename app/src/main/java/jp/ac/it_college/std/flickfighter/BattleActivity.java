@@ -197,10 +197,10 @@ public class BattleActivity extends Activity
         String sql = "SELECT * FROM BOOK ORDER BY RANDOM() LIMIT 1";
         Cursor c = mDb.rawQuery(sql, null);
         boolean isEof = c.moveToFirst();
-        //while (isEof) {
-        //    String.format(c.getString(i));
-        //isEof = c.moveToNext();
-        //}
+        /*while (isEof) {
+            String.format(c.getString(i));
+        isEof = c.moveToNext();
+        }*/
         return String.format(c.getString(i));
     }
     public static String bossWordView(int i) {
@@ -209,10 +209,10 @@ public class BattleActivity extends Activity
         String sql = "SELECT * FROM BOOK ORDER BY RANDOM() LIMIT 1";
         Cursor c = mDb.rawQuery(sql, null);
         boolean isEof = c.moveToFirst();
-        //while (isEof) {
-        // String.format(c.getString(i));
-        //isEof = c.moveToNext();
-        //}
+        /*while (isEof) {
+         String.format(c.getString(i));
+        isEof = c.moveToNext();
+        }*/
         return String.format(c.getString(i));
     }
 
@@ -409,12 +409,12 @@ public class BattleActivity extends Activity
                     messageTextView.setTextColor(Color.YELLOW);
                     messageTextView.setText("CLEAR!");
                 } else {
-                    SharedPreferences playerStatus = getSharedPreferences("status", MODE_PRIVATE);
+                    //SharedPreferences playerStatus = getSharedPreferences("status", MODE_PRIVATE);
                     //SharedPreferences data = getSharedPreferences("DataSave", Context.MODE_PRIVATE);
-                    SharedPreferences.Editor editor = playerStatus.edit();
-                    editor.putInt(POINT, playerStatus.getInt(POINT, 0) + 10);
+                    //SharedPreferences.Editor editor = playerStatus.edit();
+                    //editor.putInt(POINT, playerStatus.getInt(POINT, 0) + 10);
                     //editor.putInt("LevelSave", 0);
-                    editor.apply();
+                    //editor.apply();
                     //SharedPreferences.Editor editor = playerStatus.edit();
                     //editor.putInt(PO, playerStatus.getInt(PO, 0) + 10);
                     // SharedPreferences playerStatus = getSharedPreferences("point", Context.MODE_PRIVATE);
@@ -664,6 +664,21 @@ public class BattleActivity extends Activity
                 } else if (battleCount == maxBattleCount - 1) {
                     bossSummon();
                 } else {
+
+                    SharedPreferences playerStatus = getSharedPreferences("status", MODE_PRIVATE);
+                    //SharedPreferences data = getSharedPreferences("DataSave", Context.MODE_PRIVATE);
+                    SharedPreferences.Editor editor = playerStatus.edit();
+                    if(stageId == 1){
+                        editor.putInt(POINT, playerStatus.getInt(POINT, 0) + 10);
+                    }else if(stageId == 2){
+                        editor.putInt(POINT, playerStatus.getInt(POINT, 0) + 100);
+                    }else if(stageId == 3){
+                        editor.putInt(POINT, playerStatus.getInt(POINT, 0) + 1000);
+                    }else {
+                    }
+                    //editor.putInt(POINT, playerStatus.getInt(POINT, 0) + 10);
+                    //editor.putInt("LevelSave", 0);
+                    editor.apply();
                     //ゲームクリア時の処理
                     gameEnd(true);
                     return;
