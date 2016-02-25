@@ -12,6 +12,7 @@ import android.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -34,7 +35,7 @@ public class StatusFragment extends Fragment implements View.OnClickListener {
     private int errorSoundId;
 
     private View rootView;
-
+    private Button gatyaButton;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -45,6 +46,10 @@ public class StatusFragment extends Fragment implements View.OnClickListener {
         rootView.findViewById(R.id.button_levelUp_defence).setOnClickListener(this);
         rootView.findViewById(R.id.button_levelUp_life).setOnClickListener(this);
         rootView.findViewById(R.id.button_stage_select).setOnClickListener(this);
+
+        rootView.findViewById(R.id.button_stage_select).setOnClickListener(this);
+       // rootView.findViewById(R.id.button_gatya).setOnClickListener(this);
+        //rootView.findViewById(R.id.button_character).setOnClickListener(this);
 
         playerStatus = getActivity().getSharedPreferences("status", Context.MODE_PRIVATE);
         statusDisplay(); //ステータスの状態を表示

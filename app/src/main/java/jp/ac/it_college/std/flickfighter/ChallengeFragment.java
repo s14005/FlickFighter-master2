@@ -1,6 +1,7 @@
 package jp.ac.it_college.std.flickfighter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.app.Fragment;
@@ -19,11 +20,12 @@ public class ChallengeFragment extends Fragment
     public static final String CHALLENGE_CLEAR_NO_DAMAGE = "no_damage";
     public static final String CHALLENGE_CLEAR_RARE_CRUSHING = "rare_crushing";
     private static final String STAGE_CLEAR = "stage_clear";
-    private TextView okane;
+    private TextView text;
     private boolean mChallenge1;
     private boolean mChallenge2;
     //private boolean mChallenge3;
     private View rootVie;
+    private SharedPreferences a;
     private SharedPreferences playerStatus;
     private SharedPreferences.Editor editor;
 
@@ -62,7 +64,9 @@ public class ChallengeFragment extends Fragment
 
       //      mChallenge3 = getArguments().getBoolean(CHALLENGE_CLEAR_RARE_CRUSHING);
         }
-        okane = (TextView) rootVie.findViewById(R.id.okane);
+
+        // intentから指定キーの文字列を取得する
+        //okane = (TextView) rootVie.findViewById(R.id.okane);
         //現在のポイントを表示
         //okane.setText(""+10);
         //setContextView(R.layout.fragment_challenge);
@@ -82,14 +86,35 @@ public class ChallengeFragment extends Fragment
 
         //TextView okane = (TextView)findViewById(R.id.okane);
         //okane.setText("" + 10);
-        if(stageId == 1){
 
-        }else if(stageId == 2){
+        // 現在のintentを取得する
 
-        }else if(stageId == 3){
+        //Intent intent = getExtras();
+        //int result = intent.getIntExtra( "cul",0);
+        //SharedPreferences prefs
+     //   SharedPreferences prefs = /*getActivity().*/getSharedPreferences("HANTEI", Context.MODE_PRIVATE);
+      //  int han = prefs.getInt("HAN", 0);
 
-        }else {
-        }
+        //if (han == 1) {
+
+        ImageView imageView1 = (ImageView) view.findViewById(R.id.imageView);
+        imageView1.setImageResource(R.drawable.kane);
+
+            text = (TextView) view.findViewById(R.id.okane);
+            if (stageId == 1) {
+                text.setText("10コインGET");
+                //text.setTextSize(50.0f);
+            } else if (stageId == 2) {
+                text.setText("100コインGET");
+                //text.setTextSize(20.0f);
+            } else if (stageId == 3) {
+                text.setText("1000コインGET");
+                //text.setTextSize(30.0f);
+            } else {
+            }
+//        }else {
+  //
+
     //    challenge3 = (ImageSwitcher) view.findViewById(R.id.challenge_clear3);
     //    challenge3.setFactory(this);
 

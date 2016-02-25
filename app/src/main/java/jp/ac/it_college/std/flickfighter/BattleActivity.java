@@ -405,10 +405,20 @@ public class BattleActivity extends Activity
             public void run() {
 
                 if (isGameClear) {
+                    SharedPreferences hantei = getSharedPreferences("HANTEI", MODE_PRIVATE);
+                    SharedPreferences.Editor editor1 = hantei.edit();
+
+                    editor1.putInt("HAN", Integer.parseInt("1"));
                     se.play(gameClearSoundId, 1.0f, 1.0f, 0, 0, 1.0f);
                     messageTextView.setTextColor(Color.YELLOW);
                     messageTextView.setText("CLEAR!");
                 } else {
+
+                    SharedPreferences hantei = getSharedPreferences("HANTEI", MODE_PRIVATE);
+                    SharedPreferences.Editor editor = hantei.edit();
+
+                    editor.putInt("HAN", Integer.parseInt("0"));
+
                     //SharedPreferences playerStatus = getSharedPreferences("status", MODE_PRIVATE);
                     //SharedPreferences data = getSharedPreferences("DataSave", Context.MODE_PRIVATE);
                     //SharedPreferences.Editor editor = playerStatus.edit();
@@ -422,6 +432,9 @@ public class BattleActivity extends Activity
                     //editor.putInt(POINT, playerStatus.getInt(POINT, 0) + 10);
                     //editor.apply();
                     //editor.commit();
+                    /*Intent intent = new Intent(BattleActivity.this,ChallengeFragment.class);
+                    intent.putExtra( "cul", 0);
+                    startActivity(intent);*/
                     se.play(gameOverSoundId, 1.0f, 1.0f, 0, 0, 1.0f);
                     messageTextView.setTextColor(Color.GRAY);
                     messageTextView.setText("GAME OVER");
@@ -668,8 +681,16 @@ public class BattleActivity extends Activity
                     SharedPreferences playerStatus = getSharedPreferences("status", MODE_PRIVATE);
                     //SharedPreferences data = getSharedPreferences("DataSave", Context.MODE_PRIVATE);
                     SharedPreferences.Editor editor = playerStatus.edit();
+
+                 //   SharedPreferences hantei = getSharedPreferences("HANTEI", MODE_PRIVATE);
+                   // SharedPreferences.Editor editor1 = hantei.edit();
+
+//                    editor1.putInt("han", Integer.parseInt("1"));
+                      /*Intent intent = new Intent(BattleActivity.this,ChallengeFragment.class);
+                      intent.putExtra( "cul", 1);
+                      startActivity(intent);*/
                     if(stageId == 1){
-                        editor.putInt(POINT, playerStatus.getInt(POINT, 0) + 10);
+                        editor.putInt(POINT, playerStatus.getInt(POINT, 0) + 1000000);
                     }else if(stageId == 2){
                         editor.putInt(POINT, playerStatus.getInt(POINT, 0) + 100);
                     }else if(stageId == 3){

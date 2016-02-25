@@ -237,16 +237,12 @@
         android:layout_height="70dp"
         android:text="ステージ選択"
         android:layout_alignParentRight="true"
-        android:background="@drawable/stage_select_btn"
+        android:background="@drawable/gatya"
         android:layout_alignParentBottom="true"
         android:layout_margin="@dimen/activity_horizontal_margin"
         android:soundEffectsEnabled="false"
         />
 
-    <ProgressBar
-        style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/progressBar" />
+
 
 </RelativeLayout>

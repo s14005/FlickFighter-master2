@@ -47,11 +47,23 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/okane"
-        android:text=""
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_below="@+id/challenge2"
+        android:padding="20dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="40sp"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="50dp"
+        android:layout_alignRight="@+id/challenge2"
+        android:layout_alignEnd="@+id/challenge2"
         android:layout_alignLeft="@+id/challenge2"
         android:layout_alignStart="@+id/challenge2" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView"
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/challenge_clear2"
+        android:layout_alignStart="@+id/challenge_clear2" />
+
 
 </RelativeLayout>
